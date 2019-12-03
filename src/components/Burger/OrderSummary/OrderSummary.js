@@ -20,7 +20,7 @@ const ingredientSummary = Object.keys(props.ingredients)
             </ul>
             <p>Continue to checkout?</p>
             <Button btnType="Danger" clicked={props.purchaseCancelled}>CANCEL</Button>
-            <Button btnType="Success" clicked={props.purchaseCancelled}>CONTINUE</Button>
+            <Button btnType="Success" clicked={props.purchaseContinued}>CONTINUE</Button>
         </>
     )
 }
