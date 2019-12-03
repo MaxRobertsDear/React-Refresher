@@ -36,22 +36,23 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
         // console.log('You continue!')
-        const order = {
-            ingredients: this.state.ingredients, 
-            price: this.state.totalPrice, 
-            customer: {
-                name: "Max RD", 
-                address: {
-                    street: "Papelteich Nm 8", 
-                    town: "Bemerode"
-                }, 
-                email: "test@test.com"
-            }, 
-            deliveryMethod: 'fastest'
-        }
-        axios.post('/orders.json', order)
-            .then(response => console.log(response))
-            .catch(error => console.log(error))
+        // const order = {
+        //     ingredients: this.state.ingredients, 
+        //     price: this.state.totalPrice, 
+        //     customer: {
+        //         name: "Max RD", 
+        //         address: {
+        //             street: "Papelteich Nm 8", 
+        //             town: "Bemerode"
+        //         }, 
+        //         email: "test@test.com"
+        //     }, 
+        //     deliveryMethod: 'fastest'
+        // }
+        // axios.post('/orders.json', order)
+        //     .then(response => console.log(response))
+        //     .catch(error => console.log(error))
+        this.props.history.push('/checkout')
     }
 
     updatePurchaseable(ingredients) {
